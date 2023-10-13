@@ -8,23 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tapCount = 0
+    
     var body: some View {
-        NavigationStack {
-            Form {
-                Section {
-                    Text("Hello World")
-                }
-                Section {
-                    Text("Hello World")
-                    Text("Hello World")
-                }
-                Section {
-                    Text("Hello World")
-                    Text("Hello World")
-                }
-            }
-            .navigationTitle("SwiftUI")
-            .navigationBarTitleDisplayMode(.inline)
+        Button("Tap count: \(tapCount)") {
+            tapCount += 1
         }
     }
 }
